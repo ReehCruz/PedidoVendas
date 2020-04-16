@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="titulo">Sistema de Pedido de Venda</ui:insert></title>
+
+	<h:outputStylesheet library="css" name="sistema.css" />
+</h:head>
+
+<h:body>
+	<header>
+	<div>
+		<h:link>
+			<h:graphicImage library="imagens" name="logo-algaworks.png" />
+		</h:link>
+	</div>
+	</header>
+
+	<div id="conteudo">
+		<ui:insert name="corpo">
+
+		</ui:insert>
+	</div>
+
+	<p:separator style="margin-top: 20px"/>
+
+	<div id="footer">
+		<ui:insert name="rodape">
+				Curso Online de Sistemas Comerciais Java EE, CDI, JPA e PrimeFaces -
+				<a href="http://bit.ly./Y8saFl" target="_blank">wwww.algaworks.com </a>   
+		</ui:insert>
+	</div>
+
+</h:body>
+</html>
