@@ -66,9 +66,14 @@ h1 {
 	height: 35px;
 }
 
+.ui-selectmanycheckbox td {
+	border-width: 0px !important;
+	padding: 0px !important;
+} 
 
-
-
+.ui-selectmanycheckbox td label {
+	padding-right: 10px;
+}
 
 
 
