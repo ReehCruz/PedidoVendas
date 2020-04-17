@@ -16,7 +16,7 @@
 					<p:commandButton value="Pesquisar" />
 				</p:toolbarGroup>
 				<p:toolbarGroup align="right">
-					<p:button value="Novo" outcome="/produtos/CadastroProduto" />
+					<p:button value="Novo" outcome="/pedidos/CadastroPedido" />
 				</p:toolbarGroup>
 			</p:toolbar>
 
@@ -50,6 +50,43 @@
 					<f:selectItem itemLabel="Orçamento" />
 				</p:selectManyCheckbox>
 			</p:panelGrid>
+			
+			<p:dataTable id="pedidosTable"
+				value="#{pesquisaPedidosBean.pedidosFiltrados}" var="pedido"
+				style="margin-top: 20px" emptyMessage="Nenhum Pedido encontrado."
+				rows="20" paginator="true" paginatorAlwaysVisible="false"
+				paginatorPosition="bottom">
+				
+				<p:column headerText="Numero" style="text-align: center; width: 100px" >		
+					<h:outputText value="12345" />
+				</p:column>
+				
+				<p:column headerText="Cliente">		
+					<h:outputText value="Supermercados Villas" />
+				</p:column>
+				
+				<p:column headerText="Vendendor">		
+					<h:outputText value="Mariana Silva" />
+				</p:column>
+				
+				<p:column headerText="Data de Criação" style="text-align: center; width: 140px">		
+					<h:outputText value="16/04/2020" />
+				</p:column>
+				
+				<p:column headerText="Valor Total" style="text-align: center; width: 120px">		
+					<h:outputText value="R$ 1,240,00" />
+				</p:column>
+				
+				<p:column headerText="Status" style="text-align: center; width: 100px">		
+					<h:outputText value="Emitido" />
+				</p:column>
+				
+				<p:column style="text-align: center; width: 100px">		
+					<p:button icon="ui-icon-pencil" title="Editar"/>
+					<p:commandButton icon="ui-icon-trash" title="Excluir"/>
+				</p:column>
+				
+			</p:dataTable>
 
 		</h:form>
 	</ui:define>
