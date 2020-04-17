@@ -10,18 +10,18 @@
 	<title><ui:insert name="titulo">Sistema de Pedido de Venda</ui:insert></title>
 
 	<h:outputStylesheet library="css" name="sistema.css" />
-	<h:outputScript library="js" name="jquery.maskMoney.js"/>
+	<h:outputScript library="js" name="jquery.maskMoney.js" />
 </h:head>
-	
-	
+
+
 <h:body>
-	
+
 	<p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
 		<f:facet name="start">
-			<h:graphicImage library="imagens" name="loading.gif"/>
+			<h:graphicImage library="imagens" name="loading.gif" />
 		</f:facet>
 		<f:facet name="complete">
-			<h:outputText value=""/>
+			<h:outputText value="" />
 		</f:facet>
 	</p:ajaxStatus>
 
@@ -31,31 +31,34 @@
 			<h:graphicImage library="imagens" name="logo-algaworks.png" />
 		</h:link>
 	</div>
-	
+
 	<div style="float: right; margin-right: 110px">
+
+		<span
+			style="float: left; height: 30px; line-height: 30px; margin-right: 60px">
+			Olá usuário! </span>
+
 		<h:form style="display: inline-block">
-			<span style="float: left; height:30px; line-height:30px; margin-right: 60px">
-				Olá usuário!
-			</span>
 			<p:menubar styleClass="menu-sistema">
 				<p:submenu label="Cadastros">
-					<p:menuitem value="Clientes"/>
-					<p:menuitem value="Usuários"/>
-					<p:separator/>
-					<p:menuitem value="Categorias"/>
-					<p:menuitem value="Produtos" outcome="/produtos/PesquisaProdutos"/>
+					<p:menuitem value="Clientes" />
+					<p:menuitem value="Usuários" />
+					<p:separator />
+					<p:menuitem value="Categorias" />
+					<p:menuitem value="Produtos" outcome="/produtos/PesquisaProdutos" />
 				</p:submenu>
+				
 				<p:submenu label="Pedidos">
-					<p:menuitem value="Novo Pedido" outcome="/pedidos/CadastroPedido"/>
-					<p:menuitem value="Pesquisa Pedido" outcome="/pedidos/PesquisaPedidos"/>
+					<p:menuitem value="Novo Pedido" outcome="/pedidos/CadastroPedido" />
+					<p:menuitem value="Pesquisa Pedido"
+						outcome="/pedidos/PesquisaPedidos" />
 				</p:submenu>
-				<p:menuitem value="Sair"/>
+				
+				<p:menuitem value="Sair" />
 			</p:menubar>
 		</h:form>
 	</div>
 	<div style="clear: both"></div>
-	
-	
 	</header>
 
 	<div id="conteudo">
@@ -64,27 +67,28 @@
 		</ui:insert>
 	</div>
 
-	<p:separator style="margin-top: 20px"/>
+	<p:separator style="margin-top: 20px" />
 
 	<div id="footer">
 		<ui:insert name="rodape">
 				Curso Online de Sistemas Comerciais Java EE, CDI, JPA e PrimeFaces -
-				<a href="http://bit.ly./Y8saFl" target="_blank">wwww.algaworks.com </a>   
+				<a href="http://bit.ly./Y8saFl" target="_blank">wwww.algaworks.com
+			</a>
 		</ui:insert>
 	</div>
-	
+
 	<script>
 		function configurarMoeda() {
-				$(".moeda").maskMoney({
-					decimal: ",", 
-					thousands: ".", 
-					allowZero: true
-				});
+			$(".moeda").maskMoney({
+				decimal : ",",
+				thousands : ".",
+				allowZero : true
+			});
 		}
-		$(document).ready(function(){
+		$(document).ready(function() {
 			configurarMoeda();
 		});
 	</script>
-	
+
 </h:body>
 </html>
